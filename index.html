@@ -1,0 +1,1443 @@
+<!doctype html>
+<html lang="ca">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Rosalina Massage — Madi-Rosalina Vilà Geis</title>
+  <meta name="description" content="Massage & wellbeing — Yoga, breathing, Sensory Well-being Massage®️, and personalized accompaniment." />
+  <style>
+    :root{
+      --bg:#ffffff;
+      --card:#ffffff;
+      --text:#0b0f14;
+      --muted:#4b5563;
+      --line: rgba(11,15,20,.12);
+      --accent:#1aa6b8;      /* teal */
+      --accent2:#1d6fd6;     /* blue */
+      --accent3:#b96445;     /* warm rust */
+      --shadow: 0 14px 36px rgba(11,15,20,.08);
+      --radius: 22px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color:var(--text);
+      background: var(--bg);
+      min-height:100vh;
+      overflow-x:hidden;
+    }
+    a{color:inherit}
+    .container{max-width:1100px;margin:0 auto;padding:28px 20px 90px}
+    header{
+      position:sticky; top:0; z-index:20;
+      backdrop-filter: blur(10px);
+      background: rgba(255,255,255,.92);
+      border-bottom:1px solid var(--line);
+    }
+    .topbar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 20px;max-width:1100px;margin:0 auto}
+    .brand{display:flex;align-items:center;gap:14px;min-width:260px}
+    .brand img{height:52px;width:auto;display:block}
+    .brand .name{display:flex;flex-direction:column;line-height:1.1}
+    .brand .name strong{font-size:14px;letter-spacing:.3px}
+    .brand .name span{font-size:12px;color:var(--muted)}
+    nav{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+    nav a{
+      text-decoration:none;
+      padding:9px 12px;
+      border:1px solid transparent;
+      border-radius:999px;
+      color:var(--muted);
+      font-size:13px;
+      transition:all .2s ease;
+    }
+    nav a:hover{border-color:var(--line);color:var(--text);transform:translateY(-1px)}
+    .lang{
+      display:flex;align-items:center;gap:8px;
+      padding:6px 8px;border:1px solid var(--line);border-radius:999px;
+      background:rgba(255,255,255,.03);
+    }
+    .lang button{
+      border:0;background:transparent;color:var(--muted);
+      padding:7px 10px;border-radius:999px;cursor:pointer;font-size:12px;
+      transition:all .18s ease;
+    }
+    .lang button[aria-pressed="true"]{
+      color:#ffffff;
+      background: var(--accent3);
+      box-shadow: 0 10px 20px rgba(11,15,20,.10);
+    }
+    .lang button:hover{color:var(--text)}
+    .hero{
+      padding:34px 0 22px;
+      display:grid;
+      grid-template-columns: 1.25fr .75fr;
+      gap:22px;
+      align-items:stretch;
+    }
+    @media (max-width: 900px){
+      .hero{grid-template-columns:1fr;gap:16px}
+      .brand{min-width:auto}
+      nav{display:none}
+    }
+    .card{
+      background: #ffffff;
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .hero .left{padding:26px 24px}
+    .eyebrow{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:7px 10px;border-radius:999px;
+      background:rgba(11,15,20,.06);
+      border:1px solid rgba(11,15,20,.12);
+      color:var(--text);
+      font-size:12px;
+    }
+    .eyebrow .dot{width:8px;height:8px;border-radius:50%;background: var(--accent3);box-shadow:0 0 0 6px rgba(140,227,198,.10)}
+    h1{margin:14px 0 10px;font-size:40px;letter-spacing:-.6px}
+    @media (max-width: 560px){h1{font-size:32px}}
+    .subtitle{color:var(--muted);font-size:16px;line-height:1.55;margin:0 0 18px}
+    .pillrow{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+    .pill{
+      padding:9px 12px;border-radius:999px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.03);
+      color:var(--text);font-size:13px;
+      display:flex;align-items:center;gap:8px;
+    }
+    .pill svg{opacity:.9}
+    .hero .right{padding:18px;display:flex;flex-direction:column;gap:12px}
+    .photoWrap{
+      overflow:hidden;border-radius: 18px;border:1px solid var(--line);
+      background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+      display:flex;align-items:center;justify-content:center;
+      padding:12px;
+    }
+    .photoWrap img{width:100%;height:auto;border-radius:14px;display:block;max-height:340px;object-fit:cover}
+    .quick{
+      padding:16px 16px 14px;
+      display:grid;grid-template-columns:1fr 1fr;gap:10px;
+      background:rgba(11,15,20,.04);
+      border:1px solid var(--line);
+      border-radius:18px;
+    }
+    .qitem{padding:10px 12px;border-radius:16px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06)}
+    .qitem b{display:block;font-size:12px;color:var(--muted);font-weight:600;letter-spacing:.2px}
+    .qitem span{display:block;font-size:13px;margin-top:4px}
+    section{margin-top:26px}
+    .sectionHead{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin-bottom:12px}
+    .sectionHead h2{margin:0;font-size:22px;letter-spacing:-.2px}
+    .sectionHead p{margin:0;color:var(--muted);font-size:13px;max-width:55ch}
+    .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    @media (max-width: 900px){.grid2{grid-template-columns:1fr}}
+    .pad{padding:18px}
+    ul{margin:0;padding-left:18px;color:var(--text)}
+    li{margin:7px 0;color:var(--text)}
+    .muted{color:var(--muted)}
+    /* Timeline */
+    .timeline{position:relative;padding:18px}
+    .timeline::before{
+      content:"";position:absolute;left:28px;top:22px;bottom:22px;width:2px;
+      background:linear-gradient(to bottom, rgba(29,111,214,.28), rgba(185,100,69,.60), rgba(185,100,69,.22));
+      border-radius:10px;
+    }
+    .titem{position:relative;padding:12px 12px 12px 58px;border-radius:18px;cursor:pointer;transition:transform .18s ease, background .18s ease}
+    .titem:hover{transform:translateY(-2px);background:rgba(255,255,255,.03)}
+    .titem .dot{position:absolute;left:20px;top:18px;width:16px;height:16px;border-radius:50%;
+      background:linear-gradient(135deg,var(--accent2),var(--accent3));
+      box-shadow: 0 0 0 6px rgba(140,227,198,.10);
+    }
+    .titem .row{display:flex;align-items:baseline;justify-content:space-between;gap:10px}
+    .titem .when{font-weight:700;font-size:13px}
+    .titem .tag{font-size:12px;color:var(--muted)}
+    .titem .desc{margin:6px 0 0;color:var(--muted);font-size:13px;line-height:1.45;max-height:0;overflow:hidden;transition:max-height .28s ease}
+    .titem[aria-expanded="true"] .desc{max-height:180px}
+    .titem[aria-expanded="true"]{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06)}
+    .titem{border:1px solid transparent}
+    /* Reviews */
+    .reviews{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    @media (max-width: 900px){.reviews{grid-template-columns:1fr}}
+    .review{padding:18px}
+    .review .meta{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin-bottom:8px}
+    .review .meta b{font-size:13px}
+    .review .meta span{font-size:12px;color:var(--muted)}
+    .review p{margin:0;color:var(--text);line-height:1.6}
+    .footer{
+      margin-top:28px;
+      padding:16px 18px;
+      border-radius:18px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.03);
+      color:var(--muted);
+      font-size:12px;
+      display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;
+    }
+    .cta{
+      display:flex;gap:10px;flex-wrap:wrap;margin-top:14px
+    }
+    .btn{
+      appearance:none;border:1px solid var(--line);cursor:pointer;
+      padding:10px 12px;border-radius:999px;
+      background:rgba(255,255,255,.03);
+      color:var(--text);font-size:13px;
+      transition:transform .18s ease, border-color .18s ease, background .18s ease;
+      text-decoration:none;
+      display:inline-flex;align-items:center;gap:8px
+    }
+    .btn:hover{transform:translateY(-1px);border-color:rgba(185,100,69,.45);background:rgba(185,100,69,.08)}
+    .btn.primary{
+      border-color:transparent;
+      background: var(--accent3);
+      color:#ffffff;
+      font-weight:700;
+    }
+    .btn.primary:hover{background:#111827}
+    .sr{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+  
+    /* Active nav */
+    nav a[aria-current="page"]{
+      color:var(--text);
+      border-color:rgba(140,227,198,.30);
+      background:rgba(140,227,198,.06);
+    }
+          50%{transform:translate3d(30px,-18px,0) scale(1.06)}
+    }
+
+  
+    /* Timeline tree */
+    .edge{stroke: rgba(11,15,20,.14); stroke-width: 3; fill:none}
+    .edgeGlow{stroke: rgba(11,15,20,.10); stroke-width: 10; fill:none; filter: blur(1px)}
+    .node{cursor:pointer}
+    .node circle{
+      fill: rgba(255,255,255,.95);
+      stroke: rgba(11,15,20,.18);
+      stroke-width: 3;
+      transition: transform .15s ease, stroke .15s ease, fill .15s ease;
+    }
+    .node text{
+      fill: rgba(232,238,246,.92);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .2px;
+      user-select:none;
+      pointer-events:none;
+    }
+    .node .sub{
+      fill: rgba(169,180,195,.95);
+      font-size: 11px;
+      font-weight: 600;
+    }
+    .node:hover circle{stroke: rgba(11,15,20,.45); fill: rgba(11,15,20,.03)}
+    .node[aria-current="true"] circle{
+      stroke: rgba(11,15,20,.65);
+      fill: rgba(11,15,20,.04);
+      transform: scale(1.03);
+    }
+
+    /* Vertical timeline (blue + warm brown, softer text) */
+    .vline{position:relative; padding:6px 0; margin:0}
+    .vitem{position:relative; display:grid; grid-template-columns:110px 1fr; gap:18px; padding:14px 0; background:transparent}
+    .vitem .year{font-weight:700; letter-spacing:.2px; color:rgba(11,15,20,.72)}
+    .vitem .title{font-weight:700; margin:0 0 4px; color:rgba(11,15,20,.78); font-size:14px}
+    .vitem .desc{margin:0; color:rgba(75,85,99,.95); line-height:1.6}
+    .vitem::before{
+      content:""; position:absolute; left:110px; top:0; bottom:0; width:2px;
+      background: linear-gradient(to bottom,
+        rgba(29,111,214,.55),
+        rgba(29,111,214,.20),
+        rgba(185,100,69,.25),
+        rgba(185,100,69,.55)
+      );
+      border-radius:999px;
+    }
+    .vitem:first-child::before{top:20px}
+    .vitem:last-child::before{bottom:20px}
+    .vitem::after{
+      content:""; position:absolute; left:110px; top:22px; width:12px; height:12px; border-radius:999px;
+      background:#ffffff;
+      border:2px solid rgba(185,100,69,.55);
+      box-shadow: 0 0 0 6px rgba(29,111,214,.10);
+      transform:translateX(-6px);
+    }
+    @media (max-width: 720px){
+      .vitem{grid-template-columns:90px 1fr}
+      .vitem::before{left:90px}
+      .vitem::after{left:90px}
+    }
+
+.vitem::before{left:90px}
+      .vitem::after{left:90px}
+    }
+
+  
+        header{position:sticky; top:0; z-index:50; background:rgba(255,255,255,.92); backdrop-filter: blur(10px); border-bottom:1px solid var(--line);}
+    .topbar{position:relative; z-index:1;}
+    .btn.primary{background: linear-gradient(135deg, var(--accent), var(--accent2)); color:#ffffff;}
+    .btn.primary:hover{background: linear-gradient(135deg, var(--accent2), var(--accent));}
+    nav a:hover{border-color:rgba(26,166,184,.35); background:rgba(26,166,184,.06)}
+    .pill{border-color:rgba(26,166,184,.30); background:rgba(26,166,184,.06)}
+    .dot{background:rgba(26,166,184,.22); border:1px solid rgba(26,166,184,.28)}
+    
+  
+    /* Centered header layout */
+    .topbar2{
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 14px 22px 10px;
+      display:grid;
+      grid-template-columns: 1fr auto;
+      grid-template-rows: auto auto;
+      gap: 10px 14px;
+      align-items:center;
+    }
+    .brandCenter{justify-self:center; grid-column:1 / 3; grid-row:1}
+    .lang{justify-self:end; grid-column:2; grid-row:1}
+    .navRow{grid-column:1 / 3; grid-row:2; justify-self:center}
+    .brand img{height:64px; width:auto}
+    @media (max-width:720px){
+      .topbar2{padding: 12px 14px 10px;}
+      .brandCenter{justify-self:start; grid-column:1;}
+      .lang{grid-column:2;}
+      .navRow{justify-self:start; overflow:auto; white-space:nowrap}
+      .brand img{height:56px}
+    }
+    
+  
+    /* Stronger palette presence (without covering header/logo) */
+    body{
+      background:
+        radial-gradient(900px 520px at 20% 10%, rgba(29,111,214,.10), transparent 60%),
+        radial-gradient(900px 520px at 85% 0%, rgba(26,166,184,.10), transparent 62%),
+        radial-gradient(900px 520px at 55% 85%, rgba(185,100,69,.08), transparent 65%),
+        var(--bg);
+    }
+    .card{
+      border: 1px solid rgba(26,166,184,.16);
+      box-shadow: var(--shadow);
+    }
+    .sectionHead h2{
+      position:relative;
+      display:inline-block;
+    }
+    .sectionHead h2::after{
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:-10px;
+      width:56%;
+      height:3px;
+      border-radius:999px;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      opacity:.9;
+    }
+    .pill{
+      background: linear-gradient(135deg, rgba(26,166,184,.10), rgba(29,111,214,.08));
+      border-color: rgba(29,111,214,.22);
+    }
+    .btn{
+      border-color: rgba(29,111,214,.22);
+    }
+    .btn.primary{
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      color:#fff;
+    }
+    .btn.primary:hover{
+      filter: brightness(0.98);
+    }
+    .btn:not(.primary):hover{
+      background: rgba(26,166,184,.08);
+      border-color: rgba(26,166,184,.28);
+    }
+    nav a[aria-current="page"]{
+      border-color: rgba(26,166,184,.45);
+      background: rgba(26,166,184,.08);
+    }
+    nav a:hover{border-color:rgba(26,166,184,.35); background:rgba(26,166,184,.06)}
+    /* Timeline color accents */
+    .vitem::before{
+      background: linear-gradient(to bottom, rgba(29,111,214,.35), rgba(26,166,184,.35));
+    }
+    .vitem::after{
+      background: #fff;
+      border-color: rgba(29,111,214,.75);
+      box-shadow: 0 0 0 3px rgba(29,111,214,.10);
+    }
+    .vbtn.active::after{
+      border-color: rgba(26,166,184,.90);
+      box-shadow: 0 0 0 4px rgba(26,166,184,.14);
+    }
+    .vbtn.active .title{
+      color: var(--accent2);
+    }
+
+  
+    /* Mobile logo sizing */
+    @media (max-width:720px){
+      .brand a{gap:10px;}
+      .brand img{height:72px !important;}
+      .name strong{font-size:18px; line-height:1.05;}
+      .name span{line-height:1.05;}
+    }
+    
+  
+    /* Mobile header tighten */
+    @media (max-width:720px){
+      header{border-bottom:1px solid var(--line);}
+      .topbar2{padding: 10px 12px 8px; gap: 8px 10px;}
+      .brandCenter{justify-self:start; align-self:center;}
+      .brand a{gap:8px;}
+      .brand img{height:70px !important;}
+      .name strong{font-size:18px; line-height:1.0; margin:0}
+      .name span{line-height:1.05;}
+      /* remove extra vertical whitespace */
+      .brand .name{margin-top:-2px;}
+    }
+    
+  
+    /* Mid-page color accents */
+    .midGlow{
+      position:fixed;
+      left:50%;
+      top:52%;
+      transform:translate(-50%,-50%);
+      width:min(1100px, 92vw);
+      height:min(680px, 70vh);
+      z-index:-1;
+      background:
+        radial-gradient(520px 360px at 25% 35%, rgba(26,166,184,.16), transparent 62%),
+        radial-gradient(560px 380px at 78% 30%, rgba(29,111,214,.16), transparent 60%),
+        radial-gradient(520px 360px at 55% 78%, rgba(185,100,69,.12), transparent 62%);
+      pointer-events:none;
+      filter: blur(0px);
+    }
+    /* subtle gradient stroke on hero/main cards */
+    .card.pad{
+      position:relative;
+    }
+    .card.pad::before{
+      content:"";
+      position:absolute; inset:-1px;
+      border-radius: calc(var(--radius) + 2px);
+      padding:1px;
+      background: linear-gradient(135deg, rgba(26,166,184,.38), rgba(29,111,214,.30), rgba(185,100,69,.22));
+      -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events:none;
+      opacity:.55;
+    }
+    
+  
+/* Custom button colors (requested) */
+.btn.blue{
+  background:#e6f2ff;
+  border-color:#1d6fd6;
+  color:#1d6fd6;
+  font-weight:700;
+}
+.btn.blue:hover{ background:#d9ebff; }
+
+.btn.brown{
+  background:#f3e6e0;
+  border-color:#b96445;
+  color:#8b4a32;
+  font-weight:700;
+}
+.btn.brown:hover{ background:#ecd6cc; }
+
+</style>
+</head>
+<body>
+<header>
+<div class="topbar topbar2">
+    <div class="brand brandCenter" aria-label="Brand">
+      <a href="index.html" style="display:flex;align-items:center;gap:14px;text-decoration:none">
+        <img src="logo.png" alt="Rosalina Massage logo" />
+        <div class="name">
+          <strong>Rosalina Massage</strong>
+          <span id="brandSub">Madi-Rosalina Vilà Geis</span>
+        </div>
+      </a>
+    </div>
+
+    <div class="lang" aria-label="Language switcher">
+      <span class="sr">Language</span>
+      <button type="button" data-lang="ca" aria-pressed="true">CA</button>
+      <button type="button" data-lang="es" aria-pressed="false">ES</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+
+    <nav class="navRow" aria-label="Primary">
+      <a href="index.html#about" id="navAbout">About</a>
+      <a href="index.html#timeline" id="navTimeline">Timeline</a>
+      <a href="index.html#services" id="navServices">Services</a>
+      <a href="index.html#contact" id="navContact">Contact</a>
+      <a href="reviews.html" id="navReviews">Reviews</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <div class="midGlow" aria-hidden="true"></div>
+  <section class="hero">
+    <div class="card left">
+      <div class="eyebrow"><span class="dot"></span><span id="heroEyebrow">Benestar corporal i emocional</span></div>
+      <h1 id="heroTitle">Bienestar corporal</h1>
+      <p class="subtitle" id="heroSubtitle">
+        Acompanyo persones des de la presència, l’escolta i el respecte: massatge, ioga, respiració conscient i eines suaus per tornar al cos.
+      </p>
+
+      <div class="cta">
+        <a class="btn blue" href="reviews.html" id="heroCta1">Llegeix les opinions</a>
+        <a class="btn" href="#timeline" id="heroCta2">Veure el meu recorregut</a>
+      </div>
+
+      <div class="pillrow" aria-label="Highlights">
+        <div class="pill" id="pill1"><span>Massage</span></div>
+        <div class="pill" id="pill2"><span>Yoga</span></div>
+        <div class="pill" id="pill3"><span>Conscious breathing</span></div>
+        <div class="pill" id="pill4"><span>NVC</span></div>
+      </div>
+    </div>
+
+    <div class="card right">
+      <div class="photoWrap">
+        <img src="madi.jpg" alt="Portrait photo" />
+      </div>
+      <div class="quick" aria-label="Quick info">
+        <div class="qitem">
+          <b id="q1Label">Lloc</b>
+          <span id="q1Value">Barcelona</span>
+        </div>
+        <div class="qitem">
+          <b id="q2Label">Idiomes</b>
+          <span id="q2Value">CA · ES · FR · EN</span>
+        </div>
+        <div class="qitem">
+          <b id="q3Label">Experiència</b>
+          <span id="q3Value">Educació · Ioga · Acompanyament</span>
+        </div>
+        <div class="qitem">
+          <b id="q4Label">Enfoc</b>
+          <span id="q4Value">Suau · Profund · Personalitzat</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="sectionHead">
+      <h2 id="aboutTitle">Sobre mi</h2>
+      <p id="aboutHint">Un recorregut que uneix art, educació i benestar.</p>
+    </div>
+
+    <div class="grid2">
+      <div class="card pad">
+        <p id="aboutText" class="muted" style="margin:0;line-height:1.7"></p>
+      </div>
+
+      <div class="card pad">
+        <h3 style="margin:0 0 10px;font-size:16px" id="langsTitle">Idiomes</h3>
+        <ul id="langsList" class="muted"></ul>
+      </div>
+    </div>
+  </section>
+
+  
+  <section id="timeline">
+    <div class="sectionHead">
+      <h2 id="timelineTitle">Recorregut</h2>
+      <p id="timelineHint">Una línia del temps simple i clara del meu camí.</p>
+    </div>
+
+    <div class="card pad">
+      <div class="vline" id="vTimeline"></div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="sectionHead">
+      <h2 id="servicesTitle">Serveis</h2>
+      <p id="servicesHint">Una llista clara del que ofereixo.</p>
+    </div>
+
+    <div class="card pad">
+      <ul id="servicesList" class="muted"></ul>
+      <h3 id="servicesHowTitle" style="margin:14px 0 8px;font-size:16px">Com són les sessions</h3>
+      <ul id="servicesHowList" class="muted"></ul>
+    </div>
+  </section>
+<section id="contact">
+    <div class="sectionHead">
+      <h2 id="contactTitle">Contacte</h2>
+      <p id="contactHint">Si vols reservar o fer una pregunta, escriu-me.</p>
+    </div>
+
+    <div class="grid2">
+      <div class="card pad">
+        <h3 style="margin:0 0 10px;font-size:16px" id="contactWaysTitle">Vies de contacte</h3>
+        <div class="cta" style="margin-top:10px">
+          <a class="btn brown" id="btnWhatsApp" href="https://wa.me/34637936987" target="_blank" rel="noopener" role="button">WhatsApp</a>
+</div>
+        </div>
+
+      <div class="card pad">
+        <h3 style="margin:0 0 10px;font-size:16px" id="sessionTitle">Com són les sessions</h3>
+        <ul class="muted" id="sessionList"></ul>
+      </div>
+    </div>
+  </section>
+
+
+  <div class="footer">
+    <div id="footerLeft">© <span id="year"></span> Rosalina Massage</div>
+    <div id="footerRight">Barcelona · ES/CA/FR/EN</div>
+  </div>
+</main>
+
+<script>
+
+
+  const i18n = {
+    ca: {
+      nav: {about:"Sobre mi", timeline:"Línia del temps", services:"Serveis", contact:"Contacte", reviews:"Opinions"},
+      hero: {
+        eyebrow:"Benestar corporal i emocional",
+        title:"Bienestar corporal",
+        subtitle:"Acompanyo a través del massatge des de la presència, l’escolta i el respecte.",
+        cta1:"Llegeix les opinions",
+        cta2:"Veure el meu recorregut",
+        pills:["Massatge","Ioga","Respiració conscient","CNV"]
+      },
+      quick:{
+        q1:"Lloc", v1:"Barcelona · Viena",
+        q2:"Idiomes", v2:"Castellà · Català · Francès · Anglès",
+        q3:"Experiència", v3:"Més de 40 anys",
+        q4:"Enfoc", v4:"Suau · Presència · Respecte"
+      },
+      about:{
+        title:"Sobre mi",
+        hint:"Un recorregut que uneix art, educació i benestar.",
+        text:"Em dic <b>Madi-Rosalina Vilà Geis</b> i vaig néixer a Barcelona. Tinc 64 anys i m’apassiona acompanyar persones en el seu camí de creixement, benestar i expressió personal. Sóc una persona curiosa, sensible i compromesa amb l’aprenentatge continu. Al llarg de la meva vida he combinat l’art, l’educació i la cura del cos i les emocions, creant un recorregut professional ric i humà."
+      },
+      langs:{
+        title:"Idiomes",
+        items:[
+          "Castellà",
+          "Català",
+          "Francès",
+          "Anglès (fluid)"
+        ]
+      },
+      training:{
+        title:"Formació",
+        hint:"Acadèmica, artística i terapèutica.",
+        items:[
+          "Llicenciatura en Història i Art, Universitat de Niça (1986)",
+          "Màster en Art Abstracte (2025)",
+          "Certificació Institut Camilli (França), Sensory Well-being Massage®️ (2024)",
+          "Certificació en Comunicació No Violenta (CNV) (2025)",
+          "Focusing (2024–2026)"
+        ]
+      },
+      timeline:{
+        title:"Línia del temps",
+        hint:"Explora el meu recorregut com un arbre: clica un node per veure’n el detall.",
+        treeHelp:"Arrossega per moure’t · Roda del ratolí per fer zoom · Clica per obrir detalls",
+        panelEyebrow:"Detalls",
+        miniLabel:"Zoom",
+        items:[
+          {when:"1986", tag:"Universitat", desc:"Graduada en Història i Art (Universitat de Niça). Una base que alimenta la mirada sensible i creativa que porto al meu treball."},
+          {when:"+40 anys", tag:"Educació", desc:"Educadora de nens i adolescents durant més de 40 anys: presència, escolta i acompanyament en moments clau."},
+          {when:"+30 anys", tag:"Acompanyament", desc:"Acompanyament de persones amb dificultats de salut i mobilitat: ritmes suaus, respecte i adaptació."},
+          {when:"+20 anys", tag:"Ioga", desc:"Professora de ioga i tècniques de relaxació: cos, respiració i calma com a camí de retorn."},
+          {when:"2024", tag:"Camilli", desc:"Certificació en Sensory Well-being Massage®️ (Institut Camilli, França): una aproximació delicada i profunda al benestar."},
+          {when:"2024–2026", tag:"Focusing", desc:"Formació en Focusing: escolta interna i presència per deixar que el cos mostri el seu propi camí."},
+          {when:"2025", tag:"CNV & Art", desc:"Comunicació No Violenta (CNV) i Màster en Art Abstracte: comunicació conscient i creativitat al servei de la vida."}
+        ]
+      },
+      services:{
+        title:"Què puc oferir-te",
+        hint:"Treballo amb escolta, cura i presència.",
+        expTitle:"Experiència",
+        skillsTitle:"Àrees clau",
+        expItems:[
+          "Ioga (més de 20 anys)",
+          "Respiració conscient",
+          "Sensory Well-being Massage®️ Camilli (darrers anys)",
+          "Educació d’infants i adolescents (més de 40 anys)",
+          "Acompanyament en salut i mobilitat (més de 30 anys)",
+          "Il·lustració de llibres infantils"
+        ],
+        skillItems:[
+          "Ioga i tècniques de relaxació",
+          "Acompanyament personalitzat",
+          "Comunicació efectiva (CNV)",
+          "Sensory Well-being Massage®️ Camilli",
+          "Focusing"
+        ]
+      },
+      reviews:{
+        title:"Opinions",
+        hint:"Algunes paraules de persones que han rebut sessions."
+      },
+      contact:{
+        title:"Contacte",
+        hint:"Si vols reservar o fer una pregunta, escriu-me.",
+        waysTitle:"Vies de contacte",
+        whatsapp:"WhatsApp",
+        email:"Email",
+        note:"Pots substituir els enllaços per al teu número de WhatsApp i el teu correu (a l'arxiu <b>index.html</b>).",
+        sessionTitle:"Com són les sessions",
+        sessionItems:[
+          "Escolta i adaptació a cada persona.",
+          "Ritme suau, presència i respecte pel cos.",
+          "Espai de calma per deixar anar tensió i recuperar energia.",
+          "Si ho necessites, combinem massatge amb respiració conscient."
+        ]
+      }
+    },
+
+    es: {
+      nav: {about:"Sobre mí", timeline:"Línea del tiempo", services:"Servicios", contact:"Contacto", reviews:"Reseñas"},
+      hero: {
+        eyebrow:"Bienestar corporal y emocional",
+        title:"Bienestar corporal",
+        subtitle:"Acompaño a través del masaje desde la presencia, la escucha y el respeto.",
+        cta1:"Leer reseñas",
+        cta2:"Ver mi recorrido",
+        pills:["Masaje","Yoga","Respiración consciente","CNV"]
+      },
+      quick:{
+        q1:"Lugar", v1:"Barcelona · Viena",
+        q2:"Idiomas", v2:"Castellano · Catalán · Francés · Inglés",
+        q3:"Experiencia", v3:"Más de 40 años",
+        q4:"Enfoque", v4:"Suave · Presencia · Respeto"
+      },
+      about:{
+        title:"Sobre mí",
+        hint:"Un recorrido que une arte, educación y bienestar.",
+        text:"Me llamo <b>Madi-Rosalina Vilà Geis</b> y nací en Barcelona. Tengo 64 años y me apasiona acompañar a las personas en su camino de crecimiento, bienestar y expresión personal. Soy una persona curiosa, sensible y comprometida con el aprendizaje continuo. A lo largo de mi vida he combinado el arte, la educación y el cuidado del cuerpo y las emociones, creando un recorrido profesional rico y humano."
+      },
+      langs:{
+        title:"Idiomas",
+        items:[
+          "Castellano",
+          "Catalán",
+          "Francés",
+          "Inglés (fluido)"
+        ]
+      },
+      training:{
+        title:"Formación",
+        hint:"Académica, artística y terapéutica.",
+        items:[
+          "Licenciatura en Historia y Arte, Universidad de Niza (1986)",
+          "Máster en Arte Abstracto (2025)",
+          "Certificación Institut Camilli (Francia), Sensory Well-being Massage®️ (2024)",
+          "Certificación en Comunicación No Violenta (CNV) (2025)",
+          "Focusing (2024–2026)"
+        ]
+      },
+      timeline:{
+        title:"Línea del tiempo",
+        hint:"Explora mi recorrido como un árbol: haz clic en un nodo para ver el detalle.",
+        treeHelp:"Arrastra para moverte · Rueda del ratón para hacer zoom · Clic para ver detalles",
+        panelEyebrow:"Detalles",
+        miniLabel:"Zoom",
+        items:[
+          {when:"1986", tag:"Universidad", desc:"Licenciatura en Historia y Arte (Universidad de Niza). Una base que nutre una mirada sensible y creativa."},
+          {when:"+40 años", tag:"Educación", desc:"Educadora de niños y adolescentes durante más de 40 años: presencia, escucha y acompañamiento."},
+          {when:"+30 años", tag:"Acompañamiento", desc:"Acompañamiento de personas con problemas de salud y movilidad: respeto, suavidad y adaptación."},
+          {when:"+20 años", tag:"Yoga", desc:"Profesora de yoga y técnicas de relajación: cuerpo, respiración y calma como camino de vuelta."},
+          {when:"2024", tag:"Camilli", desc:"Certificación en Sensory Well-being Massage®️ (Institut Camilli, Francia): un enfoque delicado y profundo."},
+          {when:"2024–2026", tag:"Focusing", desc:"Formación en Focusing: escucha interna y presencia para que el cuerpo muestre su propio camino."},
+          {when:"2025", tag:"CNV & Arte", desc:"Comunicación No Violenta (CNV) y Máster en Arte Abstracto: comunicación consciente y creatividad al servicio de la vida."}
+        ]
+      },
+      services:{
+        title:"Qué puedo ofrecerte",
+        hint:"Trabajo con escucha, cuidado y presencia.",
+        expTitle:"Experiencia",
+        skillsTitle:"Áreas clave",
+        expItems:[
+          "Yoga (más de 20 años)",
+          "Respiración consciente",
+          "Sensory Well-being Massage®️ Camilli (últimos años)",
+          "Educación de niños y adolescentes (más de 40 años)",
+          "Acompañamiento en salud y movilidad (más de 30 años)",
+          "Ilustración de libros infantiles"
+        ],
+        skillItems:[
+          "Yoga y técnicas de relajación",
+          "Acompañamiento personalizado",
+          "Comunicación efectiva (CNV)",
+          "Sensory Well-being Massage®️ Camilli",
+          "Focusing"
+        ]
+      },
+      reviews:{
+        title:"Reseñas",
+        hint:"Algunas palabras de personas que han recibido sesiones."
+      },
+      contact:{
+        title:"Contacto",
+        hint:"Si quieres reservar o hacer una pregunta, escríbeme.",
+        waysTitle:"Vías de contacto",
+        whatsapp:"WhatsApp",
+        email:"Email",
+        note:"Puedes sustituir los enlaces por tu número de WhatsApp y tu correo (en el archivo <b>index.html</b>).",
+        sessionTitle:"Cómo son las sesiones",
+        sessionItems:[
+          "Escucha y adaptación a cada persona.",
+          "Ritmo suave, presencia y respeto por el cuerpo.",
+          "Un espacio de calma para soltar tensión y recuperar energía.",
+          "Si lo deseas, combinamos masaje con respiración consciente."
+        ]
+      }
+    },
+
+    en: {
+      nav: {about:"About", timeline:"Timeline", services:"Services", contact:"Contact", reviews:"Reviews"},
+      hero: {
+        eyebrow:"Body & emotional wellbeing",
+        title:"Body wellbeing",
+        subtitle:"I accompany you through massage with presence, attentive listening, and respect.",
+        cta1:"Read reviews",
+        cta2:"See my journey",
+        pills:["Massage","Yoga","Conscious breathing","NVC"]
+      },
+      quick:{
+        q1:"Based in", v1:"Barcelona · Vienna",
+        q2:"Languages", v2:"Spanish · Catalan · French · English",
+        q3:"Experience", v3:"40+ years",
+        q4:"Approach", v4:"Gentle · Presence · Respect"
+      },
+      about:{
+        title:"About me",
+        hint:"A path connecting art, education, and wellbeing.",
+        text:"My name is <b>Madi-Rosalina Vilà Geis</b> and I was born in Barcelona. I’m 64 years old and I’m passionate about supporting people on their path of growth, wellbeing, and self-expression. I’m curious, sensitive, and committed to lifelong learning. Over the years, I’ve blended art, education, and caring for the body and emotions—building a rich, human professional journey."
+      },
+      langs:{
+        title:"Languages",
+        items:[
+          "Spanish",
+          "Catalan",
+          "French",
+          "English (fluent)"
+        ]
+      },
+      training:{
+        title:"Academic & professional background",
+        hint:"Academic, artistic, and therapeutic training.",
+        items:[
+          "Degree in History and Art, University of Nice (1986)",
+          "Master’s in Abstract Art (2025)",
+          "Certified by Institut Camilli (France), Sensory Well-being Massage®️ (2024)",
+          "Certification in Non-Violent Communication (NVC) (2025)",
+          "Focusing (2024–2026)"
+        ]
+      },
+      timeline:{
+        title:"Timeline",
+        hint:"Explore my journey as a tree: click a node to see details.",
+        treeHelp:"Drag to pan · Mouse wheel to zoom · Click to open details",
+        panelEyebrow:"Details",
+        miniLabel:"Zoom",
+        items:[
+          {when:"1986", tag:"University", desc:"Degree in History and Art (University of Nice). A foundation that informs my sensitive, creative approach."},
+          {when:"40+ years", tag:"Education", desc:"Children’s & adolescent educator for over 40 years—presence, listening, and support in key life stages."},
+          {when:"30+ years", tag:"Care", desc:"Supporting people with health and mobility challenges—gentle pacing, respect, and adaptation."},
+          {when:"20+ years", tag:"Yoga", desc:"Yoga teacher and relaxation techniques—body, breath, and calm as a way home."},
+          {when:"2024", tag:"Camilli", desc:"Sensory Well-being Massage®️ certification (Institut Camilli, France): a delicate yet deep wellbeing approach."},
+          {when:"2024–2026", tag:"Focusing", desc:"Training in Focusing: inner listening and presence so the body can guide the process."},
+          {when:"2025", tag:"NVC & Art", desc:"Non-Violent Communication (NVC) and Master’s in Abstract Art—conscious communication and creativity in service of life."}
+        ]
+      },
+      services:{
+        title:"What I offer",
+        hint:"I work with listening, care, and presence.",
+        expTitle:"Experience",
+        skillsTitle:"Key areas",
+        expItems:[
+          "Yoga (20+ years)",
+          "Conscious breathing",
+          "Sensory Well-being Massage®️ Camilli (recent years)",
+          "Children’s & adolescent education (40+ years)",
+          "Health & mobility support (30+ years)",
+          "Children’s book illustration"
+        ],
+        skillItems:[
+          "Yoga and relaxation techniques",
+          "Personalized accompaniment",
+          "Effective communication (NVC)",
+          "Sensory Well-being Massage®️ Camilli",
+          "Focusing"
+        ]
+      },
+      reviews:{
+        title:"Reviews",
+        hint:"A few words from people who’ve received sessions."
+      },
+      contact:{
+        title:"Contact",
+        hint:"If you’d like to book or ask a question, message me.",
+        waysTitle:"Ways to reach me",
+        whatsapp:"WhatsApp",
+        email:"Email",
+        note:"You can replace the links with your WhatsApp number and email (in <b>index.html</b>).",
+        sessionTitle:"What sessions feel like",
+        sessionItems:[
+          "Listening and adapting to each person.",
+          "A gentle pace, presence, and respect for the body.",
+          "A calm space to release tension and restore energy.",
+          "If helpful, we can combine massage with conscious breathing."
+        ]
+      }
+    }
+  };
+
+  
+  const els = {
+    navAbout: document.getElementById("navAbout"),
+    navTimeline: document.getElementById("navTimeline"),
+    navServices: document.getElementById("navServices"),
+    navContact: document.getElementById("navContact"),
+    navReviews: document.getElementById("navReviews"),
+    heroEyebrow: document.getElementById("heroEyebrow"),
+    heroTitle: document.getElementById("heroTitle"),
+    heroSubtitle: document.getElementById("heroSubtitle"),
+    heroCta1: document.getElementById("heroCta1"),
+    heroCta2: document.getElementById("heroCta2"),
+    pill1: document.getElementById("pill1"),
+    pill2: document.getElementById("pill2"),
+    pill3: document.getElementById("pill3"),
+    pill4: document.getElementById("pill4"),
+    q1Label: document.getElementById("q1Label"),
+    q1Value: document.getElementById("q1Value"),
+    q2Label: document.getElementById("q2Label"),
+    q2Value: document.getElementById("q2Value"),
+    q3Label: document.getElementById("q3Label"),
+    q3Value: document.getElementById("q3Value"),
+    q4Label: document.getElementById("q4Label"),
+    q4Value: document.getElementById("q4Value"),
+    aboutTitle: document.getElementById("aboutTitle"),
+    aboutHint: document.getElementById("aboutHint"),
+    aboutText: document.getElementById("aboutText"),
+    langsTitle: document.getElementById("langsTitle"),
+    langsList: document.getElementById("langsList"),    timelineTitle: document.getElementById("timelineTitle"),
+    timelineHint: document.getElementById("timelineHint"),
+    timelineWrap: document.getElementById("timelineWrap"),
+    treeHelp: document.getElementById("treeHelp"),
+    panelEyebrow: document.getElementById("panelEyebrow"),
+    miniLabel: document.getElementById("miniLabel"),
+    servicesTitle: document.getElementById("servicesTitle"),
+    servicesHint: document.getElementById("servicesHint"),
+    servicesHowTitle: document.getElementById("servicesHowTitle"),
+    servicesHowList: document.getElementById("servicesHowList"),
+    expTitle: document.getElementById("expTitle"),
+    skillsTitle: document.getElementById("skillsTitle"),
+    expList: document.getElementById("expList"),
+    skillsList: document.getElementById("skillsList"),
+    reviewsTitle: document.getElementById("reviewsTitle"),
+    reviewsHint: document.getElementById("reviewsHint"),
+    reviewsWrap: document.getElementById("reviewsWrap"),
+    contactTitle: document.getElementById("contactTitle"),
+    contactHint: document.getElementById("contactHint"),
+    contactWaysTitle: document.getElementById("contactWaysTitle"),
+    btnWhatsApp: document.getElementById("btnWhatsApp"),    sessionTitle: document.getElementById("sessionTitle"),
+    sessionList: document.getElementById("sessionList"),
+    year: document.getElementById("year")
+  };
+
+  function setActiveLangButton(lang){
+    document.querySelectorAll(".lang button").forEach(b=>{
+      b.setAttribute("aria-pressed", String(b.dataset.lang === lang));
+    });
+  }
+
+  
+  function renderServicesBlock(sv){
+    const ul = document.getElementById("servicesList");
+    const howTitle = document.getElementById("servicesHowTitle");
+    const howUl = document.getElementById("servicesHowList");
+    if(ul){
+      ul.innerHTML = "";
+      (sv.services || []).forEach(t=>{
+        const li = document.createElement("li");
+        li.textContent = t;
+        ul.appendChild(li);
+      });
+    }
+    if(howTitle) howTitle.textContent = sv.howTitle || "";
+    if(howUl){
+      howUl.innerHTML = "";
+      (sv.howItems || []).forEach(t=>{
+        const li = document.createElement("li");
+        li.textContent = t;
+        howUl.appendChild(li);
+      });
+    }
+  }
+
+  
+  function renderVerticalTimeline(items){
+    const wrap = document.getElementById("vTimeline");
+    if(!wrap) return;
+    wrap.innerHTML = "";
+    let openIndex = 0;
+
+    items.forEach((it, idx)=>{
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "vitem vbtn";
+      btn.setAttribute("aria-expanded", String(idx === openIndex));
+      btn.innerHTML = `
+        <div class="year">${it.year}</div>
+        <div>
+          <div class="title">${it.title}</div>
+          <div class="descWrap" style="${idx===openIndex ? "" : "max-height:0;opacity:0;"}">
+            <p class="desc">${it.desc}</p>
+          </div>
+        </div>
+      `;
+      btn.addEventListener("click", ()=>{
+        openIndex = (openIndex === idx) ? -1 : idx;
+        wrap.querySelectorAll(".vbtn").forEach((el,i)=>{
+          const expanded = (i === openIndex);
+          el.setAttribute("aria-expanded", String(expanded));
+          const dw = el.querySelector(".descWrap");
+          if(dw){
+            if(expanded){
+              dw.style.maxHeight = dw.scrollHeight + "px";
+              dw.style.opacity = "1";
+            }else{
+              dw.style.maxHeight = "0px";
+              dw.style.opacity = "0";
+            }
+          }
+        });
+      });
+
+      wrap.appendChild(btn);
+    });
+
+    requestAnimationFrame(()=>{
+      wrap.querySelectorAll(".vbtn").forEach((el)=>{
+        const dw = el.querySelector(".descWrap");
+        if(dw && el.getAttribute("aria-expanded")==="true"){
+          dw.style.maxHeight = dw.scrollHeight + "px";
+          dw.style.opacity = "1";
+        }
+      });
+    });
+
+    const obs = new IntersectionObserver((entries)=>{
+      entries.forEach(en=>{
+        if(en.isIntersecting){
+          wrap.querySelectorAll(".vbtn").forEach(x=>x.classList.remove("active"));
+          en.target.classList.add("active");
+        }
+      });
+    }, {rootMargin:"-45% 0px -50% 0px", threshold:0.01});
+    wrap.querySelectorAll(".vbtn").forEach(el=>obs.observe(el));
+  }
+
+
+  function renderList(ul, items){
+    ul.innerHTML = "";
+    items.forEach(t=>{
+      const li = document.createElement("li");
+      li.textContent = t;
+      ul.appendChild(li);
+    });
+  }
+
+  function renderTimeline(items){
+    els.timelineWrap.innerHTML = "";
+    items.forEach((it, idx)=>{
+      const div = document.createElement("div");
+      div.className = "titem";
+      div.setAttribute("role","button");
+      div.setAttribute("tabindex","0");
+      div.setAttribute("aria-expanded", "false");
+      div.innerHTML = `
+        <span class="dot" aria-hidden="true"></span>
+        <div class="row">
+          <div class="when">${it.when}</div>
+          <div class="tag">${it.tag}</div>
+        </div>
+        <div class="desc">${it.desc}</div>
+      `;
+      const toggle = ()=> {
+        const expanded = div.getAttribute("aria-expanded") === "true";
+        div.setAttribute("aria-expanded", String(!expanded));
+      };
+      div.addEventListener("click", toggle);
+      div.addEventListener("keydown", (e)=>{
+        if(e.key === "Enter" || e.key === " "){
+          e.preventDefault(); toggle();
+        }
+      });
+      // open the first item by default for a friendly feel
+      if(idx === 0) div.setAttribute("aria-expanded","true");
+      els.timelineWrap.appendChild(div);
+    });
+  }
+
+  // Interactive genealogy-like timeline tree (SVG + pan/zoom)
+  let treeState = {lang:"ca", idx:0, scale:1, tx:0, ty:0, dragging:false, lastX:0, lastY:0};
+
+  function layoutTree(items){
+    // Fixed pleasant layout (root -> branches) for up to ~8 nodes
+    // Coordinates in viewBox space (900x520)
+    const coords = [
+      {x:120,y:260}, // root
+      {x:310,y:150},
+      {x:310,y:370},
+      {x:520,y:120},
+      {x:520,y:260},
+      {x:520,y:400},
+      {x:740,y:180},
+      {x:740,y:340},
+    ];
+    return items.map((it,i)=>({id:i, ...it, ...(coords[i] || {x:120+ i*90, y:260})}));
+  }
+
+  function renderTree(lang){
+    treeState.lang = lang;
+    const t = i18n[lang] || i18n.ca;
+    const items = layoutTree(t.timeline.items);
+    const svg = document.getElementById("treeSvg");
+    if(!svg) return;
+
+    // edges as parent-child for a tree-like story
+    const edges = [
+      [0,1],[0,2],
+      [1,3],[1,4],
+      [2,5],
+      [4,6],[5,7]
+    ].filter(([a,b])=> items[a] && items[b]);
+
+    svg.innerHTML = "";
+
+    // group with transform for pan/zoom
+    const g = document.createElementNS("http://www.w3.org/2000/svg","g");
+    g.setAttribute("id","treeG");
+    svg.appendChild(g);
+
+    // edges
+    edges.forEach(([a,b])=>{
+      const A = items[a], B = items[b];
+      const path = document.createElementNS("http://www.w3.org/2000/svg","path");
+      const glow = document.createElementNS("http://www.w3.org/2000/svg","path");
+      const midx = (A.x + B.x)/2;
+      const d = `M ${A.x} ${A.y} C ${midx} ${A.y}, ${midx} ${B.y}, ${B.x} ${B.y}`;
+      path.setAttribute("d", d);
+      glow.setAttribute("d", d);
+      path.setAttribute("class","edge");
+      glow.setAttribute("class","edgeGlow");
+      g.appendChild(glow);
+      g.appendChild(path);
+    });
+
+    // nodes
+    items.forEach((it)=>{
+      const node = document.createElementNS("http://www.w3.org/2000/svg","g");
+      node.setAttribute("class","node");
+      node.setAttribute("tabindex","0");
+      node.setAttribute("role","button");
+      node.setAttribute("data-id", String(it.id));
+      node.setAttribute("aria-label", `${it.when} ${it.tag}`);
+      node.setAttribute("aria-current", "false");
+
+      const c = document.createElementNS("http://www.w3.org/2000/svg","circle");
+      c.setAttribute("cx", it.x);
+      c.setAttribute("cy", it.y);
+      c.setAttribute("r", 34);
+
+      const t1 = document.createElementNS("http://www.w3.org/2000/svg","text");
+      t1.setAttribute("x", it.x);
+      t1.setAttribute("y", it.y - 4);
+      t1.setAttribute("text-anchor","middle");
+      t1.textContent = it.when;
+
+      const t2 = document.createElementNS("http://www.w3.org/2000/svg","text");
+      t2.setAttribute("x", it.x);
+      t2.setAttribute("y", it.y + 14);
+      t2.setAttribute("text-anchor","middle");
+      t2.setAttribute("class","sub");
+      t2.textContent = it.tag;
+
+      node.appendChild(c); node.appendChild(t1); node.appendChild(t2);
+      g.appendChild(node);
+    });
+
+    // set default selection
+    selectTreeNode(treeState.idx, items);
+
+    // handlers
+    g.querySelectorAll(".node").forEach(n=>{
+      const activate = ()=>{
+        const id = Number(n.getAttribute("data-id"));
+        treeState.idx = id;
+        selectTreeNode(id, items);
+      };
+      n.addEventListener("click", activate);
+      n.addEventListener("keydown", (e)=>{
+        if(e.key === "Enter" || e.key === " "){ e.preventDefault(); activate(); }
+      });
+    });
+
+    // Pan/zoom
+    treeState.scale = 1; treeState.tx = 0; treeState.ty = 0;
+    applyTreeTransform();
+    attachTreePanZoom(svg);
+    updateMiniZoom();
+  }
+
+  function selectTreeNode(id, items){
+    const svg = document.getElementById("treeSvg");
+    if(!svg) return;
+    svg.querySelectorAll(".node").forEach(n=>n.setAttribute("aria-current","false"));
+    const n = svg.querySelector(`.node[data-id="${id}"]`);
+    if(n) n.setAttribute("aria-current","true");
+
+    const it = items[id];
+    const panelTitle = document.getElementById("panelTitle");
+    const panelMeta  = document.getElementById("panelMeta");
+    const panelDesc  = document.getElementById("panelDesc");
+    if(panelTitle) panelTitle.textContent = it ? it.when : "";
+    if(panelMeta)  panelMeta.textContent  = it ? it.tag : "";
+    if(panelDesc)  panelDesc.textContent  = it ? it.desc : "";
+
+    // gentle focus on node (center)
+    if(it) {
+      treeState.tx = 450 - it.x*treeState.scale;
+      treeState.ty = 260 - it.y*treeState.scale;
+      applyTreeTransform();
+    }
+  }
+
+  function applyTreeTransform(){
+    const g = document.getElementById("treeG");
+    if(!g) return;
+    g.setAttribute("transform", `translate(${treeState.tx},${treeState.ty}) scale(${treeState.scale})`);
+  }
+
+  function updateMiniZoom(){
+    const z = document.getElementById("miniZoom");
+    if(z) z.textContent = Math.round(treeState.scale*100) + "%";
+  }
+
+  function attachTreePanZoom(svg){
+    // Avoid attaching twice
+    if(svg.dataset.pzAttached === "true") return;
+    svg.dataset.pzAttached = "true";
+
+    svg.addEventListener("wheel", (e)=>{
+      e.preventDefault();
+      const delta = Math.sign(e.deltaY);
+      const next = Math.max(0.75, Math.min(1.7, treeState.scale * (delta>0 ? 0.92 : 1.08)));
+      treeState.scale = next;
+      applyTreeTransform();
+      updateMiniZoom();
+    }, {passive:false});
+
+    svg.addEventListener("pointerdown", (e)=>{
+      treeState.dragging = true;
+      treeState.lastX = e.clientX;
+      treeState.lastY = e.clientY;
+      svg.setPointerCapture(e.pointerId);
+    });
+    svg.addEventListener("pointermove", (e)=>{
+      if(!treeState.dragging) return;
+      const dx = e.clientX - treeState.lastX;
+      const dy = e.clientY - treeState.lastY;
+      treeState.lastX = e.clientX;
+      treeState.lastY = e.clientY;
+      treeState.tx += dx;
+      treeState.ty += dy;
+      applyTreeTransform();
+    });
+    svg.addEventListener("pointerup", ()=>{
+      treeState.dragging = false;
+    });
+
+    // Panel buttons
+    const prev = document.getElementById("btnPrev");
+    const next = document.getElementById("btnNext");
+    const reset= document.getElementById("btnReset");
+    const go = (dir)=>{
+      const t = i18n[treeState.lang] || i18n.ca;
+      const items = layoutTree(t.timeline.items);
+      const n = items.length;
+      treeState.idx = (treeState.idx + dir + n) % n;
+      selectTreeNode(treeState.idx, items);
+    };
+    if(prev) prev.addEventListener("click", ()=>go(-1));
+    if(next) next.addEventListener("click", ()=>go(1));
+    if(reset) reset.addEventListener("click", ()=>{
+      treeState.scale = 1; treeState.tx = 0; treeState.ty = 0;
+      applyTreeTransform(); updateMiniZoom();
+    });
+  }
+
+  function applyLang(lang){
+    const t = i18n[lang] || i18n.ca;
+    document.documentElement.lang = lang;
+
+    // nav
+    els.navAbout.textContent = t.nav.about;
+    els.navTimeline.textContent = t.nav.timeline;
+    els.navServices.textContent = t.nav.services;
+    els.navContact.textContent = t.nav.contact;
+    els.navReviews.textContent = t.nav.reviews;
+
+    // hero
+    els.heroEyebrow.textContent = t.hero.eyebrow;
+    els.heroTitle.textContent = t.hero.title;
+    els.heroSubtitle.textContent = t.hero.subtitle;
+    els.heroCta1.textContent = t.hero.cta1;
+    els.heroCta2.textContent = t.hero.cta2;
+
+    // pills
+    els.pill1.textContent = t.hero.pills[0];
+    els.pill2.textContent = t.hero.pills[1];
+    els.pill3.textContent = t.hero.pills[2];
+    els.pill4.textContent = t.hero.pills[3];
+
+    // quick
+    els.q1Label.textContent = t.quick.q1; els.q1Value.textContent = t.quick.v1;
+    els.q2Label.textContent = t.quick.q2; els.q2Value.textContent = t.quick.v2;
+    els.q3Label.textContent = t.quick.q3; els.q3Value.textContent = t.quick.v3;
+    els.q4Label.textContent = t.quick.q4; els.q4Value.textContent = t.quick.v4;
+
+    // about
+    els.aboutTitle.textContent = t.about.title;
+    els.aboutHint.textContent = t.about.hint;
+    els.aboutText.innerHTML = t.about.text;
+
+    // languages
+    els.langsTitle.textContent = t.langs.title;
+    renderList(els.langsList, t.langs.items);
+
+    // timeline (vertical)
+    const tl = (timelineData[lang] || timelineData.ca);
+    els.timelineTitle.textContent = tl.title;
+    els.timelineHint.textContent = tl.hint;
+    renderVerticalTimeline(tl.items);
+
+    // services (simple list)
+    const sv = (servicesData[lang] || servicesData.ca);
+    els.servicesTitle.textContent = sv.title;
+    els.servicesHint.textContent = sv.hint;
+    renderServicesBlock(sv);
+
+
+    // contact
+    els.contactTitle.textContent = t.contact.title;
+    els.contactHint.textContent = t.contact.hint;
+    els.contactWaysTitle.textContent = t.contact.waysTitle;
+    els.btnWhatsApp.textContent = t.contact.whatsapp;    els.sessionTitle.textContent = t.contact.sessionTitle;
+    renderList(els.sessionList, t.contact.sessionItems);
+
+    // remember preference
+    localStorage.setItem("rosalina_lang", lang);
+    applyContactLinks();
+    setActiveLangButton(lang);
+  }
+
+  // simple scroll reveal
+  const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        e.target.style.transform = "translateY(0)";
+        e.target.style.opacity = "1";
+        observer.unobserve(e.target);
+      }
+    });
+  }, {threshold: .08});
+
+  function initReveal(){
+    document.querySelectorAll(".card").forEach(c=>{
+      c.style.opacity = "0";
+      c.style.transform = "translateY(10px)";
+      c.style.transition = "opacity .55s ease, transform .55s ease";
+      observer.observe(c);
+    });
+  }
+
+  
+  const servicesData = {"ca": {"title": "Serveis", "hint": "", "services": ["Massage Sensitif® Camilli de Benestar", "Sessions d’1h"], "howTitle": "Com són les sessions:", "howItems": ["escolta", "ritme suau, presència i respecte", "un espai de calma etc..."]}, "es": {"title": "Servicios", "hint": "", "services": ["Massage Sensitif® Camilli de Bienestar", "Sesiones de 1h"], "howTitle": "Cómo son las sesiones:", "howItems": ["escucha", "ritmo suave, presencia y respeto", "un espacio de calma etc..."]}, "en": {"title": "Services", "hint": "", "services": ["Sensory Well-being Massage® Camilli", "1-hour sessions"], "howTitle": "What sessions are like:", "howItems": ["listening", "gentle rhythm, presence and respect", "a calm space, etc..."]}};
+  const timelineData = {"ca": {"title": "Recorregut", "hint": "Una línia del temps simple i clara del meu camí.", "items": [{"year": "1986", "title": "Història i Art (Universitat de Niça)", "desc": "Una base acadèmica i artística que alimenta la meva mirada sensible i creativa."}, {"year": "Més de 40 anys", "title": "Educació d’infants i adolescents", "desc": "Presència, escolta i acompanyament en etapes clau."}, {"year": "Més de 30 anys", "title": "Acompanyament en salut i mobilitat", "desc": "Ritmes suaus, respecte i adaptació a cada persona."}, {"year": "Més de 20 anys", "title": "Ioga i relaxació", "desc": "Cos, respiració i calma com a camí de retorn."}, {"year": "2024", "title": "Institut Camilli", "desc": "Certificació en Sensory Well-being Massage®️: un enfocament delicat i profund."}, {"year": "2024–2026", "title": "Focusing", "desc": "Escolta interna i presència perquè el cos guiï el procés."}, {"year": "2025", "title": "Comunicació No Violenta (CNV)", "desc": "Comunicació conscient al servei del benestar."}]}, "es": {"title": "Recorrido", "hint": "Una línea del tiempo simple y clara de mi camino.", "items": [{"year": "1986", "title": "Historia y Arte (Universidad de Niza)", "desc": "Una base académica y artística que alimenta una mirada sensible y creativa."}, {"year": "Más de 40 años", "title": "Educación de niños y adolescentes", "desc": "Presencia, escucha y acompañamiento en etapas clave."}, {"year": "Más de 30 años", "title": "Acompañamiento en salud y movilidad", "desc": "Ritmos suaves, respeto y adaptación a cada persona."}, {"year": "Más de 20 años", "title": "Yoga y relajación", "desc": "Cuerpo, respiración y calma como camino de regreso."}, {"year": "2024", "title": "Institut Camilli", "desc": "Certificación en Sensory Well-being Massage®️: un enfoque delicado y profundo."}, {"year": "2024–2026", "title": "Focusing", "desc": "Escucha interna y presencia para que el cuerpo guíe el proceso."}, {"year": "2025", "title": "Comunicación No Violenta (CNV)", "desc": "Comunicación consciente al servicio del bienestar."}]}, "en": {"title": "Journey", "hint": "A simple, clear timeline of my path.", "items": [{"year": "1986", "title": "History & Art (University of Nice)", "desc": "An academic and artistic foundation that shapes a sensitive, creative approach."}, {"year": "40+ years", "title": "Children & adolescent education", "desc": "Presence, listening, and support through key life stages."}, {"year": "30+ years", "title": "Health & mobility accompaniment", "desc": "Gentle pacing, respect, and adaptation to each person."}, {"year": "20+ years", "title": "Yoga & relaxation", "desc": "Body, breath, and calm as a way back home."}, {"year": "2024", "title": "Institut Camilli", "desc": "Certified in Sensory Well-being Massage®️: a delicate yet deep approach."}, {"year": "2024–2026", "title": "Focusing", "desc": "Inner listening and presence so the body can guide the process."}, {"year": "2025", "title": "Non-Violent Communication (NVC)", "desc": "Conscious communication in service of wellbeing."}]}};
+
+  // Language buttons
+  document.querySelectorAll(".lang button").forEach(btn=>{
+    btn.addEventListener("click", ()=> applyLang(btn.dataset.lang));
+  });
+
+
+  // Smooth scroll for nav links
+  document.querySelectorAll('nav a[href^="#"]').forEach(a=>{
+    a.addEventListener("click", (e)=>{
+      const id = a.getAttribute("href");
+      const el = document.querySelector(id);
+      if(el){
+        e.preventDefault();
+        el.scrollIntoView({behavior:"smooth", block:"start"});
+        history.replaceState(null, "", id);
+      }
+    });
+  });
+
+  // Active nav highlighting on scroll
+  const sections = ["#about","#timeline","#services","#contact","#reviews"].map(s=>document.querySelector(s)).filter(Boolean);
+  const navMap = {
+    "#about": document.getElementById("navAbout"),
+    "#timeline": document.getElementById("navTimeline"),
+    "#services": document.getElementById("navServices"),
+    "#contact": document.getElementById("navContact"),
+      };
+  const navObs = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        Object.values(navMap).forEach(a=>a && a.removeAttribute("aria-current"));
+        const id = "#" + entry.target.id;
+        if(navMap[id]) navMap[id].setAttribute("aria-current","page");
+      }
+    });
+  }, {rootMargin: "-45% 0px -50% 0px", threshold: 0.01});
+  sections.forEach(s=>navObs.observe(s));
+
+  // Contact links (replace placeholders)
+  const WHATSAPP_NUMBER = "34637936987"; // Spain (+34) + 637936987
+  const EMAIL_ADDRESS = "";   // e.g. "hola@rosalinamassage.com"
+
+  function applyContactLinks(){
+    const wa = document.getElementById("btnWhatsApp");
+    const em = document.getElementById("btnEmail");
+    if(wa){
+      wa.href = WHATSAPP_NUMBER ? `https://wa.me/${WHATSAPP_NUMBER}` : "#";
+      wa.title = WHATSAPP_NUMBER ? "Open WhatsApp" : "Set your WhatsApp number in the code";
+    }
+    if(em){
+      em.href = EMAIL_ADDRESS ? `mailto:${EMAIL_ADDRESS}` : "#";
+      em.title = EMAIL_ADDRESS ? "Send an email" : "Set your email in the code";
+    }
+  }
+
+
+  // Init
+  els.year.textContent = new Date().getFullYear();
+  const saved = localStorage.getItem("rosalina_lang");
+  const initial = saved || "ca";
+  applyLang(initial);
+  applyContactLinks();
+  initReveal();
+
+</script>
+</body>
+</html>
